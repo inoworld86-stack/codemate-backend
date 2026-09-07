@@ -56,6 +56,8 @@ def call_openrouter(messages):
         timeout=60
     )
     result = resp.json()
+    if "choices" not in result:
+        raise RuntimeError(f"OpenRouter error (status {resp.status_code}): {result}")
     return result["choices"][0]["message"]["content"]
 
 
@@ -78,6 +80,8 @@ def call_groq(messages):
         timeout=30
     )
     result = resp.json()
+    if "choices" not in result:
+        raise RuntimeError(f"Groq error (status {resp.status_code}): {result}")
     return result["choices"][0]["message"]["content"]
 
 
