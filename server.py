@@ -8,7 +8,7 @@ OPENROUTER_KEY = os.environ.get("OPENROUTER_KEY", "")
 GROQ_KEY = os.environ.get("GROQ_KEY", "")
 
 PRO_MODEL = "anthropic/claude-haiku-4.5"
-GROQ_MODEL = "llama-3.3-70b-versatile"
+GROQ_MODEL = "openai/gpt-oss-20b"
 
 SYSTEM_PROMPT = "You are CodeMate, an AI coding assistant. Give detailed, thorough answers with clear explanations and code examples when relevant. Don't be overly brief."
 
